@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            display: grid;
+
+            height: 600px;
+            row-gap: 1px;
+            column-gap: 1px;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+        }
+
+
+        .item img {
+            widtH: 100%;
+            height: 100%;
+
+        }
+
+        .padding {
+            padding: 10px;
+        }
+
+        .s1 {
+            grid-row: 1/3;
+        }
+
+        .s5 {
+            grid-column: 2/-1;
+        }
+
+        button {
+            margin: 0 auto;
+            display: block;
+            padding: 20px;
+            background-color: aqua;
+            border: none;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick=myFunc() id="button">Click For adding some padding</button>
+    <main>
+        <section class="s1 item">
+            <img src="img/2.jpg" alt="">
+        </section>
+        <section class="s2 item">
+            <img src="img/3.jpg" alt="">
+        </section>
+        <section class="s3 item">
+            <img src="img/2.jpg" alt="">
+        </section>
+        <section class="s4 item">
+            <img src="img/1.png" alt="">
+        </section>
+        <section class="s5 item">
+            <img src="img/4.jpg" alt="">
+        </section>
+
+    </main>
+    <script>
+            function myFunc(){
+                const item = document.querySelectorAll(".item");
+               
+                item.forEach(element => {
+                    element.classList.toggle('padding');
+                });
+                const button = document.querySelector("#button");
+            button.innerHTML === "Click For adding some padding" ? button.innerHTML="Remove this Padding." : button.innerHTML="Click For adding some padding";
+            }
+            
+
+
+    </script>
+</body>
+
+</html>
