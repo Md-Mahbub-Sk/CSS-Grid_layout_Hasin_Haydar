@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background:black;
+    color:white;
+    background-image: url(img/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding:10px 20px;
+    margin: 8px;
+}
+main{
+    display: grid;
+    grid-template-rows: 50px 5fr 1fr;
+    height: 100vh;
+}
+main footer{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: flex-end
+}
+section{
+    text-align: center;
+    padding-top:98px;
+    
+}
+h2{
+    font-weight: 400;
+    font-size: 18px;
+}
+h1{
+    font-weight: 300;
+    font-size: 38px;
+}
+p.left{
+    text-align: left;
+}
+p.right{
+    text-align: right;
+}
